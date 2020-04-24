@@ -5,14 +5,15 @@
 
 ## 安装
 
-### 环境 
-
+### 环境
 - nodejs
 - mysql 5.7
 
-将数据库文件(.sql)导入数据库
+### 导入数据库
 
-推荐使用Navicat for MySql
+将数据库文件(.sql)导入数据库（推荐使用Navicat for MySql）
+
+### 安装依赖
 
 ```js
 npm install
@@ -22,6 +23,10 @@ npm install
 
 ```js
 npm start
+```
+
+```
+localhost:3000
 ```
 
 ## 配置
