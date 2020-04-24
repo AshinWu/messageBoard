@@ -1,0 +1,56 @@
+<% include header %>
+<div class="front-container">
+    <div class="front-wrapper">
+        <div class="container column">
+            <div class="center">
+                <!-- 正文 -->
+                <div class="screen-div"></div>
+                <!-- 留言列表 -->
+                <div class="list-div">
+                    <ul class="list-ul">
+                    </ul>
+                    <div id="page" class="page_div"></div>
+                </div>
+                <!-- 发表留言 -->
+                <% if(session.user){ %>
+                <div class="send-div">
+                    <form class="message-form" method="post">
+                        <div class="send-head">
+                            发表留言
+                        </div>
+                        <div class="send-title">
+                            <div class="head-txt">
+                                <input type="text" name="title" class="title" placeholder="请输入标题(20字以内)" maxlength="20">
+                                <span class="tip"></span>
+                                <input type="hidden" name="uid" value="<%= session.id%>">
+                                <input type="hidden" name="user" value="<%= session.user%>">
+                            </div>
+                        </div>
+                        <div class="main-txt">
+                            <textarea name="content" class="content" placeholder="请输入内容(255字以内)" maxlength="255"></textarea>
+                        </div>
+                        <div class="warp-footer">
+                            <div class="warp-footer-btns">
+                                <div class="release-btn">
+                                    <a class="post-btn">发布</a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <% } %>
+                <!-- 留言列表 end -->
+                <!-- 左翼 -->
+                <div class="left column"></div>
+                <!-- 右翼 -->
+                <div class="right column"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="/javascripts/index.js"></script>
+<script type="text/javascript" src="/javascripts/pagination.js"></script>
+<script>
+    
+</script>
+<% include footer %>
